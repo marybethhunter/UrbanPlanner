@@ -9,6 +9,11 @@ namespace Urban_Planner
     class Building
     {
         //constructor
+        //overloading - same name on multiple methods but different signature/takes different arguments
+        public Building()
+        {
+
+        }
         public Building(string address)
         {
             _address = address;
@@ -50,6 +55,19 @@ namespace Urban_Planner
             Console.WriteLine($"Constructed on {_dateConstructed}");
             Console.WriteLine($"Owned by {_owner}");
             Console.WriteLine($"{Volume} cubic meters of space");
+        }
+
+        //@ - string verbatim - will take every keystroke literally including new lines (enter key)
+        public void GiveDetails()
+        {
+            string output = $@"
+{_address}---------
+Designed by {_designer}
+Constructed on {_dateConstructed}
+Owned by {_owner}
+{Volume} cubic meters of space";
+
+            Console.WriteLine(output);
         }
     }
 }
