@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Urban_Planner
+namespace Urban_Planner.Models
 {
     class Building
     {
-        //constructor
+        //constructor - same name and return type as the class
         //overloading - same name on multiple methods but different signature/takes different arguments
         public Building()
         {
@@ -29,12 +25,14 @@ namespace Urban_Planner
         public int Stories { get; set; }
         public double Width { get; set; }
         public double Depth { get; set; }
-        private double Volume
+        public double Volume
         {
             get
             {
                 return Width * Depth * (3 * Stories);
             }
+            //or
+            //get => Width * Depth * (3 * Stories);
         }
 
         //public methods
